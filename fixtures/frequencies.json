@@ -1,0 +1,38 @@
+[
+{
+    "model": "monitor.lkpfrequency",
+    "pk": 1,
+    "fields": {
+        "code": "MNUT",
+        "name": "Minutes",
+        "description": "Check X number of minutes"
+    }
+},
+{
+    "model": "monitor.lkpfrequency",
+    "pk": 2,
+    "fields": {
+        "code": "HOUR",
+        "name": "Hourly",
+        "description": "Check X number of hours"
+    }
+},
+{
+    "model": "monitor.lkpfrequency",
+    "pk": 3,
+    "fields": {
+        "code": "DAY",
+        "name": "Daily",
+        "description": "Check X number of days"
+    }
+},
+{
+    "model": "monitor.lkpfrequency",
+    "pk": 4,
+    "fields": {
+        "code": "WEEK",
+        "name": "Weekly",
+        "description": "Check X number of weeks"
+    }
+}
+]

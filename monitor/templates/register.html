@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<script>
+function login() {
+	window.location = "/accounts/login";
+}
+</script>
+	<h1>User Registration</h1>
+	<form method="post" class="form-group">
+		<table>
+	{{ form.as_table }}
+</table>
+	{% csrf_token %}
+	<input type="submit" name="submit" class="btn" value="Register">
+	</form>
+	<p>You can also <button onclick="login()">Login</button> if you have an account.</p>
+{% endblock %}

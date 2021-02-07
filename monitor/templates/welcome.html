@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<script>
+function login() {
+	window.location = "/accounts/login";
+}
+function register() {
+	window.location = "/register";
+}
+</script>
+
+<h1>Site Monitoring</h1>
+	<p>Register to start adding sites to monitor. It is a simple way to track whether your favorite sites are repsonding properly.</p>
+	<br/>
+	<button onclick="login()">Login</button> | 
+	<button onclick="register()">Register With This Site</button><br/>
+{% endblock %}

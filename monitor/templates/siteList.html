@@ -1,0 +1,33 @@
+{% extends 'base.html' %} 
+{% block content %}
+<script>
+function editSite(value) {
+	window.location = "/site/" + value;
+}
+function addSite(value) {
+	window.location = "/site";
+}
+</script>
+{% if request.user.first_name %}
+	<h1>Sites for {{ request.user.first_name }}</h1>
+{% else %}
+	<h1>My Sites</h1>
+{% endif %} 
+<button class="btn-default" onclick="addSite()">Add A Site</button>
+<br/><br/>
+{% if sites %} 
+{% for site in sites %}
+<div class="col-md-5 site">
+	<div class="row"><strong>Name:</strong> {{ site.name |safe }}</div>
+	<div class="row"><strong>URL:</strong> {{ site.url |safe}}</div>
+	<div class="row">
+		Last Check: {{ site.lastCheck}} Last Result: {{ site.lastResult }}
+		<button class="btn-default" onclick="editSite('{{ site.id }}')">Edit</button>
+	</div>
+</div>
+<div class="col-md-1">&nbsp;</div>
+{% endfor %} 
+{% else %}
+	<div class="row">No sites entered. Click on Add a Site to get started.</div>
+{% endif %} 
+{% endblock %}

@@ -1,0 +1,38 @@
+[
+{
+    "model": "monitor.lkpresult",
+    "pk": 1,
+    "fields": {
+        "code": "SIMP",
+        "name": "Simple Response",
+        "description": "Ensure we get at least a response"
+    }
+},
+{
+    "model": "monitor.lkpresult",
+    "pk": 2,
+    "fields": {
+        "code": "LIVE",
+        "name": "Is Alive",
+        "description": "Get a response code of 200."
+    }
+},
+{
+    "model": "monitor.lkpresult",
+    "pk": 3,
+    "fields": {
+        "code": "VALU",
+        "name": "Value Response",
+        "description": "Check the content, not just the status"
+    }
+},
+{
+    "model": "monitor.lkpresult",
+    "pk": 4,
+    "fields": {
+        "code": "FAIL",
+        "name": "Failure",
+        "description": "Result failed for desired goal"
+    }
+}
+]

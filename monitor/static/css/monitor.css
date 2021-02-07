@@ -1,0 +1,109 @@
+.btn-default {
+	color: #333;
+	background-color: #cdddeb;
+	border-color: #ccc;
+}
+.title-sub {
+    font-style: italic;
+    text-align: center;
+    font-size: 16px;
+}
+.message {
+    font-style: italic;
+    text-align: left;
+    color: #DD0000;
+    font-size: 14px;
+}
+.content {
+  width: 90%;
+  align-content: center;
+  padding-left: 5%;
+  margin-left: 5%;
+  padding-top: 50;
+  background-color: burlywood;
+  color: #222;
+  height: 80%;
+}
+.standard-footer {
+    height:50px;
+    width: 100%;
+    background-image: none;
+    background-color: #cdddeb;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: fixed;
+    bottom: 0pt;
+    left: 0pt;}
+
+.standard-footer p:last-child {
+    margin-bottom: 0;
+}
+.jumbotron {
+    color: #990000;
+    background-color: #fbfbfb;
+    margin-top: 0px;
+    padding: 1% 1% 1% 1%;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.site {
+  display: block;
+  position: relative;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-color: #EEE;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Transition to a bigger shadow on hover */
+.site:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* The fast way */
+.make-it-fast {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+/* Pre-render the bigger shadow, but hide it */
+.make-it-fast::after {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Transition to showing the bigger shadow on hover */
+.site:hover::after {
+  opacity: 1;
+}
+
+fieldset {
+    display: block;
+    -webkit-margin-start: 1px;
+    -webkit-margin-end: 10px;
+    -webkit-padding-before: 0.35em;
+    -webkit-padding-start: 0.75em;
+    -webkit-padding-end: 0.75em;
+    -webkit-padding-after: 0.625em;
+    min-width: -webkit-min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-color: threedface;
+    border-image: initial;
+}
+
+legend {
+  padding: 0.2em 0.5em;
+  border:1px solid #336699;
+  color: #336699;
+  background-color: #EEE;
+  font-size:90%;
+  text-align:left;
+ }

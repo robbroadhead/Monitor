@@ -1,0 +1,20 @@
+[
+{
+    "model": "monitor.lkpping",
+    "pk": 1,
+    "fields": {
+        "code": "HRTB",
+        "name": "Heart Beat",
+        "description": "Just looking for a response"
+    }
+},
+{
+    "model": "monitor.lkpping",
+    "pk": 2,
+    "fields": {
+        "code": "DATA",
+        "name": "Data Returned",
+        "description": "Response beyond hello. Data should be returned"
+    }
+}
+]
