@@ -1,5 +1,6 @@
 {% extends 'base.html' %} 
 {% block content %}
+<meta http-equiv="refresh" content="15" >
 <script>
 function editSite(value) {
 	window.location = "/site/" + value;
@@ -17,7 +18,15 @@ function addSite(value) {
 <br/><br/>
 {% if sites %} 
 {% for site in sites %}
-<div class="col-md-5 site">
+	{% if site.lastResult_id == 2 %} 
+		<div class="col-md-5 siteup">
+	{% else %}
+		{% if site.lastResult_id == 4 %} 
+			<div class="col-md-5 sitedown">
+		{% else %}
+			<div class="col-md-5 site">
+		{% endif %} 
+	{% endif %} 
 	<div class="row"><strong>Name:</strong> {{ site.name |safe }}</div>
 	<div class="row"><strong>URL:</strong> {{ site.url |safe}}</div>
 	<div class="row">

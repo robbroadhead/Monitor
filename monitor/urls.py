@@ -25,5 +25,7 @@ urlpatterns = [
     path('sites', views.ListSites),
     path('site/<int:id>', views.EditSite),
     path('site', views.AddSite),
+    path('hb', views.HeartBeat),
+    path('m/<int:value1>/<int:value2>', views.Multiply),
     path('register/', views.userRegister),
 ]

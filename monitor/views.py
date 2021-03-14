@@ -14,6 +14,12 @@ def HomePage(request):
 	else:
 		return redirect("/sites")
 
+def HeartBeat(request):
+	return HttpResponse("The Site is Responding!")
+
+def Multiply(request,value1,value2):
+	return HttpResponse(value1 * value2)
+
 def ListSites(request):
 	if request.user.is_authenticated:
 		sites = Sites.objects.all()
