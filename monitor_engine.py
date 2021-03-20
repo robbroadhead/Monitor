@@ -5,10 +5,12 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'monitor.settings'
 import django
 django.setup()
 
+import schedule
+import time
 from monitor.models import Sites,lkpResult
 import platform    # For getting the operating system name
 import subprocess  # For executing a shell command
-from datetime import datetime, date, time, timedelta
+from datetime import datetime, timedelta
 import pytz
 import requests
 
@@ -42,10 +44,8 @@ def checkRequests():
     sites = Sites.objects.filter(ping_id=2)
     now = utc.localize(datetime.today())
     for site in sites:
-        if site.lastCheck == None or site.lastCheck == None or (site.lastCheck + timedelta(minutes=site.frequency))  < now:
+        if site.lastCheck == None or (site.lastCheck + timedelta(minutes=site.frequency))  < now:
             result = requests.get(site.url)
-            print(result.text)
-            print(result.status_code)
             thisResult = lkpResult.objects.get(code='FAIL')
             if site.desiredResult_id == 3:
                 if result.text == site.resultValue:
@@ -59,21 +59,16 @@ def checkRequests():
         else:
             print("Skipped: " + site.name)
 
-# Main part of the script
-checkHeartBeats()
-checkRequests()
-print("*** Update Complete ***")    
 
+# Main part of the script
 # New Approach
 # pip3 install schedule
-import schedule
-import time
-
 def job():
     checkHeartBeats()
     checkRequests()
     print("*** Job Complete ***")    
 
+job
 # schedule.every(60).seconds.do(job)
 schedule.every(1).minute.do(job)
 

@@ -96,10 +96,6 @@
 
 
 /* Transition to a bigger shadow on hover */
-.site:hover {
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
 /* The fast way */
 .make-it-fast {
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
@@ -113,7 +109,29 @@
 }
 
 /* Transition to showing the bigger shadow on hover */
+.site:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
 .site:hover::after {
+  opacity: 1;
+}
+
+/* Transition to showing the bigger shadow on hover */
+.siteup:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.siteup:hover::after {
+  opacity: 1;
+}
+
+/* Transition to showing the bigger shadow on hover */
+.sitedown:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.sitedown:hover::after {
   opacity: 1;
 }
 
